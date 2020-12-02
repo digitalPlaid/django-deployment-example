@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+    {% block body_block %}
+    <h1>Welcome to relative url templates</h1>
+    <!-- to use relative template urls -->
+    <!-- app_name(from urls.py in the app's folder):view_name(check the urlpatterns) -->
+    <a href="{% url 'basic_app:other' %}">THE OTHER PAGE</a>
+    <a href="{% url 'admin:index' %}">THE ADMIN PAGE</a>
+    <a href="{% url 'index' %}">THE INDEX PAGE</a>
+    {% endblock %}
